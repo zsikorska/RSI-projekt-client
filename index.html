@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person ajax client</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="message" class="message">
+        <span id="message-text">Person added successfully!</span>
+    </div>
+    <div class="container">
+        <h1 id="operations-header">Operations</h1>
+        <div id="operations-container">
+            <!-- Buttons for different CRUD operations -->
+            <button id="getAllBtn">Get All</button>
+            <button id="getByIdBtn">Get by Id</button>
+            <button id="filterByNameBtn">Filter by Name</button>
+            <button id="countBtn">Count</button>
+            <button id="addBtn">Add</button>
+            <button id="updateBtn">Update</button>
+            <button id="deleteBtn">Delete</button>
+            <button id="printAuthorsBtn">Print Authors</button>
+
+
+            <!-- Form for adding/updating/deleting a person -->
+            <div id="form-container">
+                <h2 id="form-title"></h2>
+                <form id="person-form">
+                    <div id="inputs-container"></div>
+                    <button id="submitBtn" type="button">Submit</button>
+                    <button type="button" onclick="clearForm()">Clear</button>
+                    <button type="button" onclick="hideForm()">Cancel</button>
+                </form>
+
+            </div>
+        </div>
+        <!-- Table to display persons -->
+        <h1>People</h1>
+        <table id="persons-table">
+            <thead id="persons-table-header">
+            <tr id="persons-table-header-row">
+                <th>Id</th>
+                <th>Name</th>
+                <th>Height</th>
+                <th>Birthdate</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+            <tbody id="persons-list"></tbody>
+        </table>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
